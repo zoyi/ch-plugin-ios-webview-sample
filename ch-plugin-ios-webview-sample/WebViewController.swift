@@ -22,7 +22,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
   }
 
   private func openWebView() {
-    let url = URL(string: "http://www.naver.com")!
+    let url = URL(string: "https://app.channel.io/plugins/b2b59139-f0cb-400d-b989-46a6793fdb3b")!
     let request = URLRequest(url: url)
     self.webView.loadRequest(request)
   }
