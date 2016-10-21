@@ -21,6 +21,9 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwH-sa-8eU">
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jrJ-b1-5vv" id="UVy-ST-joC"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,6 +35,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="ULA-Kn-d3n"/>
+                    <connections>
+                        <outlet property="webView" destination="rwH-sa-8eU" id="asV-dM-lnp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqU-Ki-lgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,10 @@
 
 import UIKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, UIWebViewDelegate {
+
+  @IBOutlet weak var webView: UIWebView!
+
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,13 +22,43 @@ class WebViewController: UIViewController {
   }
 
   private func openWebView() {
-//    UIApplication.shared.application
-//    let main = UIStoryboard(name: "Main'", bundle: nil)
-//    let controller = main.instantiateViewController(withIdentifier: "MainViewController") as? MainViewController
-
     let url = URL(string: "http://www.naver.com")!
-    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-
+    let request = URLRequest(url: url)
+    self.webView.loadRequest(request)
   }
-
 }
+
+/*
+ 
+ For NSURLSession/NSURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9843) Error
+ At Info.plist add -- security wise, may be bad
+ <key>NSAppTransportSecurity</key>
+ <dict>
+ <key>NSAllowsArbitraryLoads</key>
+ <true/>
+ </dict>
+
+ -- another option
+ <key>NSAppTransportSecurity</key>
+ <dict>
+ <key>NSExceptionDomains</key>
+ <dict>
+ <key>myDomain.com</key>
+ <dict>
+ <!--Include to allow subdomains-->
+ <key>NSIncludesSubdomains</key>
+ <true/>
+ <!--Include to allow HTTP requests-->
+ <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+ <true/>
+ <!--Include to specify minimum TLS version-->
+ <key>NSTemporaryExceptionMinimumTLSVersion</key>
+ <string>TLSv1.1</string>
+ </dict>
+ </dict>
+ </dict>
+
+
+
+
+ */
