@@ -12,10 +12,6 @@ class WebViewController: UIViewController, UIWebViewDelegate {
 
   @IBOutlet weak var webView: UIWebView!
 
-//  override var prefersStatusBarHidden: Bool {
-//    return true
-//  }
-
   override func viewDidLoad() {
     super.viewDidLoad()
     self.openWebView()
