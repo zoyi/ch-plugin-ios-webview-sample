@@ -34,7 +34,7 @@
                             <constraint firstItem="rwH-sa-8eU" firstAttribute="top" secondItem="Vi8-ou-d35" secondAttribute="top" id="sQV-Mv-FBR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="ULA-Kn-d3n"/>
+                    <tabBarItem key="tabBarItem" title="1 : 1" image="userchatDefault" selectedImage="userchatSelected" id="ULA-Kn-d3n"/>
                     <connections>
                         <outlet property="webView" destination="rwH-sa-8eU" id="asV-dM-lnp"/>
                     </connections>
@@ -68,7 +68,7 @@
                             <constraint firstItem="Wig-lC-7WF" firstAttribute="centerX" secondItem="Xt6-uk-Cnb" secondAttribute="centerX" id="uOo-tb-12I"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="lRd-nn-ZQz"/>
+                    <tabBarItem key="tabBarItem" title="Menu" image="emailDefault" selectedImage="emailDefault" id="lRd-nn-ZQz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3xp-SS-rq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,4 +93,9 @@
             <point key="canvasLocation" x="-801" y="1109"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="emailDefault" width="24" height="24"/>
+        <image name="userchatDefault" width="24" height="24"/>
+        <image name="userchatSelected" width="24" height="24"/>
+    </resources>
 </document>
